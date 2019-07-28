@@ -13,3 +13,7 @@ There is also another method of building a cart system using providers.
 3. Delete Product from cart
 4. Validation if Product is already in Cart.
 5. Calculate all cart Data.
+
+Built with Ionic 3.
+
+Donate : paypal.me/ajayrandhawa
