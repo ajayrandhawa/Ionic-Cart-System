@@ -1,0 +1,62 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cart</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+        <div class="grids">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-6> Delivery Charges </ion-col>
+              <ion-col col-6 class="DeliveryCharges">
+                <span style="float:right">$ {{ shipping }}</span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-6> Total </ion-col>
+              <ion-col col-6 class="grandtotal">
+                <span style="float:right">$ {{ finalamount}}</span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <hr />
+        <div class="cartitems">
+          <ion-grid>
+            <ion-row *ngFor="let c of finalcartdata; let itemno = index">
+              <ion-col><img src="{{c.itemImage}}"></ion-col>
+              <ion-col class="noborder"> 
+                <ion-row>
+                  <ion-col>{{ c.itemname }} </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>{{ c.itemquantitytype }}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>Qty : {{c.itemquantity}}</ion-col>
+                  </ion-row>
+              </ion-col>
+              <ion-col>
+                <ion-row style="border:none">
+                <ion-col>
+                  $ {{ c.itemprice * c.itemquantity }}    
+                </ion-col>
+              </ion-row>
+              <ion-row style="border:none" class="updwnbtn">
+                  <button ion-button color="danger" outline (click)="changeQty(itemno,-1)"><b>-</b></button>
+                  <button ion-button color="danger" outline (click)="changeQty(itemno, 1)" ><b>+</b></button> 
+              </ion-row>
+            </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 8rem;"><b> Total : ${{finalamount}}</b></h3>
+</ion-content>

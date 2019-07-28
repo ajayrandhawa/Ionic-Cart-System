@@ -1,0 +1,47 @@
+page-cart {
+
+    .toolbar-background {
+        border-color: #0CC66D;
+        background: #0CC66D;
+      }
+
+      .back-button{
+          color: #ffffff;
+      }
+
+    .col {
+        font-family: roboto;
+        font-weight: bold;
+      }
+
+      .DeliveryCharges{
+        color: #f53d3d;
+      }
+      
+      .grandtotal{
+        color: #0CC66D;
+      }
+      
+      .cartitems{
+        margin-top: 8px;
+        text-align: center;
+      }
+      
+      .cartitems img{
+        width: 6rem;
+      }
+
+      .cartitems ion-row{
+        border-bottom: 1px solid #d3d3d3;
+      }
+
+      .updwnbtn button{
+        border-radius: 10%;
+      }
+
+      .noborder ion-row{
+        border-bottom: 0px;
+      }
+      
+      
+}

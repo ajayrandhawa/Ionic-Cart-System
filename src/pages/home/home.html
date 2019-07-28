@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Cart System
+    </ion-title>
+    <ion-buttons end class="cartbadge">
+    <button ion-button (click)="gotocart()">
+      <ion-icon name="ios-cart"></ion-icon>
+    </button><ion-badge item-end>{{cartCounterManager()}}</ion-badge>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="products">
+  <ion-card *ngFor="let item of products;  let i = index;">
+    <img class="p-2" src="{{item.image}}">
+  <ion-card-header>
+    <h2 class="text-center">{{item.name}}</h2>
+  </ion-card-header>
+  <ion-card-content>
+      <div class="quantity">{{item.quantitytype}}</div> <div class="price">$ {{item.price}}</div>
+      <div class="btn-cart"><button ion-button (click)="addToCart(item.id,item.name,item.quantity,item.quantitytype,item.price, item.image)"><ion-icon name="md-add-circle"></ion-icon>&nbsp;Add to Cart</button>
+      </div>
+  </ion-card-content>
+</ion-card>
+</div>
+</ion-content>
