@@ -5,3 +5,11 @@ Ionic cart system is a program which shows how we create cart management system 
 There is also another method of building a cart system using providers.
 
 <img src="view.gif" />
+
+## Features: 
+
+1. Add Items to Cart
+2. Increment & Decrement Product Quantity
+3. Delete Product from cart
+4. Validation if Product is already in Cart.
+5. Calculate all cart Data.
